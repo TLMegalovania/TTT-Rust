@@ -1,45 +1,18 @@
-enum PlayerType {
-  None,
-  Host,
-  Guest,
-  Observer,
-}
-
-enum RoomState {
-  Available,
-  Full,
-  InGame,
-}
-
-enum PieceType {
-  Null,
-  Black,
-  White,
-}
-
-enum WinType {
-  Null,
-  Tie,
-  Black,
-  White,
-  Flee,
-}
-
 struct RoomInfo {
-  Player1: String,
-  Player2: String,
-  State: RoomState
+    pub Player1: String,
+    pub Player2: String,
+    pub State: i32,
 }
 
-struct RoomDetail  {
-  Player1: String,
-  Player2: String,
-  P1Ready: bool,
-  P2Ready: bool,
+struct RoomDetail {
+    pub Player1: String,
+    pub Player2: String,
+    pub P1Ready: bool,
+    pub P2Ready: bool,
 }
 
-struct BoardInfo {
-  Board: Vec<PieceType>,
-  Turn: PieceType,
-  Result: WinType
+pub(crate) struct BoardInfo {
+    pub Board: Vec<i32>,
+    pub Turn: i32,
+    pub Result: i32,
 }
